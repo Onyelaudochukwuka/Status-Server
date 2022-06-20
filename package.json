@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "twilio": "^3.77.3"
+    "twilio": "^3.77.3",
+    "dotenv": "^16.0.0"
   }
 }
