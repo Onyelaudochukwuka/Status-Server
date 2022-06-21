@@ -47,6 +47,7 @@
  
 # Usage Guide
 
+#### id serves as a private key while publickey serves as a public key
 ## Routes
 
 ### /ping
@@ -127,10 +128,46 @@ fetch('https://status.up.railway.app/users', options)
   - id
   
   ###### payload
-  - firstName
-  - lastName
-  - password
+  - firstName (optional)
+  - lastName (optional)
+  - password (optional)
+  - phone (required)
   
+```bash 
+const options = {
+  method: 'PUT',
+  headers: {publickey: 'm28yk6ju7nmqmevz780e', id: '7afrngqinomsv37pt1g0'},
+  body: '{"lastName":"onyela","firstName":"Udoka","password":"lightighvt","countrycode":"234","phone":"8022623069","tosAgreement":true}'
+};
+
+fetch('https://status.up.railway.app/users', options)
+  .then(response => response.json())
+  .then(response => console.log(response))
+  .catch(err => console.error(err));
+  
+ ```
+#### DELETE
+
+##### used to delete a user's data requires
+
+  ###### headers
+  - id
+  
+  ###### payload
+  - phone
+ 
+```bash
+const options = {
+  method: 'GET',
+  headers: {publickey: 'm28yk6ju7nmqmevz780e', id: '7afrngqinomsv37pt1g0'}
+};
+
+fetch('https://status.up.railway.app/users?phone=8022623069', options)
+  .then(response => response.json())
+  .then(response => console.log(response))
+  .catch(err => console.error(err));
+  
+  ```
   
   
 
