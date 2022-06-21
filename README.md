@@ -73,12 +73,14 @@ fetch('https://status.up.railway.app/ping', options)
   ### A token is a a key needed by a user to edit data i.e a token is required to
   #### POST
   
-  ##### used to create a user, reqiured parameters are
+  ##### used to create a token, reqiured parameters are
   
   ###### payload
   
   - phone
   - password
+
+you can only used the phone password you used in creating a user
 
 ```bash
 
@@ -104,23 +106,22 @@ fetch('https://status.up.railway.app/tokens', options)
   
   ###### query
   - phone
+  - password
  
  ```bash
- 
  const options = {
   method: 'GET',
-  headers: {publickey: 'm28yk6ju7nmqmevz780e', id: '7afrngqinomsv37pt1g0'}
+  headers: {publickey: 'm28yk6ju7nmqmevz780e', id: '5fjikzbymsxi036o2ebf'}
 };
 
-fetch('https://status.up.railway.app/users', options)
+fetch('https://status.up.railway.app/tokens?id=usg3t5war42alp6jck0j', options)
   .then(response => response.json())
   .then(response => console.log(response))
   .catch(err => console.error(err));
-  
   ```
   #### PUT
   
-  ##### used to update user data requires
+  ##### used to update token data or extend expiration time by a day, requires
   
   ###### headers
   - id
@@ -135,10 +136,10 @@ fetch('https://status.up.railway.app/users', options)
 const options = {
   method: 'PUT',
   headers: {publickey: 'm28yk6ju7nmqmevz780e', id: '7afrngqinomsv37pt1g0'},
-  body: '{"lastName":"onyela","firstName":"Udoka","password":"lightighvt","countrycode":"234","phone":"8022623069","tosAgreement":true}'
+  body: '{"id":id,"extend":true}'
 };
 
-fetch('https://status.up.railway.app/users', options)
+fetch('https://status.up.railway.app/tokens', options)
   .then(response => response.json())
   .then(response => console.log(response))
   .catch(err => console.error(err));
@@ -146,7 +147,7 @@ fetch('https://status.up.railway.app/users', options)
  ```
 #### DELETE
 
-##### used to delete a user's data requires
+##### used to delete a token's data, requires
 
   ###### headers
   - id
@@ -160,7 +161,7 @@ const options = {
   headers: {publickey: 'm28yk6ju7nmqmevz780e', id: '7afrngqinomsv37pt1g0'}
 };
 
-fetch('https://status.up.railway.app/users?phone=8022623069', options)
+fetch('https://status.up.railway.app/users?id=id', options)
   .then(response => response.json())
   .then(response => console.log(response))
   .catch(err => console.error(err));
