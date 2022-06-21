@@ -46,3 +46,92 @@
         
  
 # Usage Guide
+
+## Routes
+
+### /ping
+
+##### checks if the API is or down
+
+```bash
+
+const options = {
+  method: 'GET',
+  headers: {publickey: 'm28yk6ju7nmqmevz780e', id: '7afrngqinomsv37pt1g0'}
+};
+
+fetch('https://status.up.railway.app/ping', options)
+  .then(response => response.json())
+  .then(response => console.log(response))
+  .catch(err => console.error(err));
+  
+  ```
+  
+  ### /users
+  
+  #### POST
+  
+  ##### used to create a user, reqiured parameters are
+  
+  ###### payload
+  
+  - firstName
+  - lastName
+  - phone
+  - password
+  - tosAgreement
+
+```bash
+
+const options = {
+  method: 'POST',
+  headers: {publickey: 'm28yk6ju7nmqmevz780e', id: '7afrngqinomsv37pt1g0'},
+  body: '{"lastName":"onyela","firstName":"Udoka","password":"lightighvt","countrycode":"234","phone":"8022623069","tosAgreement":true}'
+};
+
+fetch('https://status.up.railway.app/users', options)
+  .then(response => response.json())
+  .then(response => console.log(response))
+  .catch(err => console.error(err));
+  
+  ```
+  
+  #### GET
+  
+  ##### used to get user stored data reqires
+  
+  ###### headers
+  - id
+  
+  ###### query
+  - phone
+ 
+ ```bash
+ 
+ const options = {
+  method: 'GET',
+  headers: {publickey: 'm28yk6ju7nmqmevz780e', id: '7afrngqinomsv37pt1g0'}
+};
+
+fetch('https://status.up.railway.app/users', options)
+  .then(response => response.json())
+  .then(response => console.log(response))
+  .catch(err => console.error(err));
+  
+  ```
+  #### PUT
+  
+  ##### used to update user data requires
+  
+  ###### headers
+  - id
+  
+  ###### payload
+  - firstName
+  - lastName
+  - password
+  
+  
+  
+
+  
