@@ -6,30 +6,43 @@
 
 ### dependency tree
 
-|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|                                                                                                                                                                     |   
-|  |--------------------------------------------------------------------------------------------------------------|                                                   |
-|  |                                                                                                              |                                                   |
-|  |        index -----------------------------------------                                                       |                                                   |
-|  |         |                                            |                                                       |-------handles all user request and response       |
-|  |    ----    ----                                      |                                                                                                           |
-|  |   |           |                                      |           hanldles all routes on the server---------------------------------------------------------------|   |  |   |           |                                      |            
-|  - server      workers--------------|                   |
-|      |           |                  |                   |------initializes the server and workers
-|      |           |                  |
-|---handlers     logs-------|         |-----------handles all data logs and checks
-       |           |        |
-       |           |        |----------handles creation of logfiles and their compression and update
+           index 
+             |   
+       ----    ----   
+       |           |
+       |           |         
+    server      workers     
+       |           |         
+       |           |              
+     handlers     logs        
+       |           |      
+       |           |        
        |-----------|
              |
              |
-           helpers-------handles hashing of passwords, parsing payload to json and 
+           helpers
              |
              |
-           data---handles file creation and data extraction
+           data
              |
              |
-          config--handles environment configuration
+          config
+          
+          index--initializes the server and workers.
+          
+          servers---handles all user request and response.
+          
+          workers-----handles all data logs and checks.
+          
+          handlers---hanldles all routes on the server.
+          
+          logs----handles creation of logfiles and their compression and update.
+          
+          helpers---handles hashing of passwords, parsing payload to json , texting users, creating.
+          
+          data----handles file creation and data extraction.
+          
+          config---handles environment configuration.
         
  
 # Usage Guide
