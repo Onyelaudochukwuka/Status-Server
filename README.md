@@ -272,7 +272,5 @@ fetch('https://status.up.railway.app/users?phone=8022623069', options)
   .catch(err => console.error(err));
   
   ```
-  
-  
-
-  
+  ### /checks
+  #### POST
