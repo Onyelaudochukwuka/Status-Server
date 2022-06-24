@@ -52,13 +52,12 @@
 
 ### /ping
 
-##### checks if the API is or down
+##### Method for generating public keys
 
 ```bash
 
 const options = {
   method: 'GET',
-  headers: {publickey: 'm28yk6ju7nmqmevz780e', id: '7afrngqinomsv37pt1g0'}
 };
 
 fetch('https://status.up.railway.app/ping', options)
@@ -86,7 +85,7 @@ you can only used the phone password you used in creating a user
 
 const options = {
   method: 'POST',
-  headers: {publickey: 'm28yk6ju7nmqmevz780e'},
+  headers: {publickey: 'k7d5ih4q27nwicpxw3tr'},
   body: '{"password":"lightighvt","phone":"8022623069"}'
 };
 
@@ -111,7 +110,7 @@ fetch('https://status.up.railway.app/tokens', options)
  ```bash
  const options = {
   method: 'GET',
-  headers: {publickey: 'm28yk6ju7nmqmevz780e', id: '5fjikzbymsxi036o2ebf'}
+  headers: {publickey: 'k7d5ih4q27nwicpxw3tr', id: '5fjikzbymsxi036o2ebf'}
 };
 
 fetch('https://status.up.railway.app/tokens?id=usg3t5war42alp6jck0j', options)
@@ -135,7 +134,7 @@ fetch('https://status.up.railway.app/tokens?id=usg3t5war42alp6jck0j', options)
 ```bash 
 const options = {
   method: 'PUT',
-  headers: {publickey: 'm28yk6ju7nmqmevz780e', id: '7afrngqinomsv37pt1g0'},
+  headers: {publickey: 'k7d5ih4q27nwicpxw3tr', id: '7afrngqinomsv37pt1g0'},
   body: '{"id":id,"extend":true}'
 };
 
@@ -157,8 +156,8 @@ fetch('https://status.up.railway.app/tokens', options)
  
 ```bash
 const options = {
-  method: 'GET',
-  headers: {publickey: 'm28yk6ju7nmqmevz780e', id: '7afrngqinomsv37pt1g0'}
+  method: 'DELETE',
+  headers: {publickey: 'k7d5ih4q27nwicpxw3tr', id: '7afrngqinomsv37pt1g0'}
 };
 
 fetch('https://status.up.railway.app/users?id=id', options)
@@ -190,7 +189,7 @@ fetch('https://status.up.railway.app/users?id=id', options)
 
 const options = {
   method: 'POST',
-  headers: {publickey: 'm28yk6ju7nmqmevz780e', id: '7afrngqinomsv37pt1g0'},
+  headers: {publickey: 'k7d5ih4q27nwicpxw3tr', id: '7afrngqinomsv37pt1g0'},
   body: '{"lastName":"onyela","firstName":"Udoka","password":"lightighvt","countrycode":"234","phone":"8022623069","tosAgreement":true}'
 };
 
@@ -215,7 +214,7 @@ fetch('https://status.up.railway.app/users', options)
  
  const options = {
   method: 'GET',
-  headers: {publickey: 'm28yk6ju7nmqmevz780e', id: '7afrngqinomsv37pt1g0'}
+  headers: {publickey: 'k7d5ih4q27nwicpxw3tr', id: '7afrngqinomsv37pt1g0'}
 };
 
 fetch('https://status.up.railway.app/users', options)
@@ -240,7 +239,7 @@ fetch('https://status.up.railway.app/users', options)
 ```bash 
 const options = {
   method: 'PUT',
-  headers: {publickey: 'm28yk6ju7nmqmevz780e', id: '7afrngqinomsv37pt1g0'},
+  headers: {publickey: 'k7d5ih4q27nwicpxw3tr', id: '7afrngqinomsv37pt1g0'},
   body: '{"lastName":"onyela","firstName":"Udoka","password":"lightighvt","countrycode":"234","phone":"8022623069","tosAgreement":true}'
 };
 
@@ -262,8 +261,8 @@ fetch('https://status.up.railway.app/users', options)
  
 ```bash
 const options = {
-  method: 'GET',
-  headers: {publickey: 'm28yk6ju7nmqmevz780e', id: '7afrngqinomsv37pt1g0'}
+  method: 'DELETE',
+  headers: {publickey: 'k7d5ih4q27nwicpxw3tr', id: '7afrngqinomsv37pt1g0'}
 };
 
 fetch('https://status.up.railway.app/users?phone=8022623069', options)
